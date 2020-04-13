@@ -89,12 +89,13 @@ static ssize_t touch_fops_write(struct file *file, const char *buf, size_t count
 			
 		}
 
-		if(strncmp(buf, "debugon", 5)==0)
+		if(strncmp(buf, "debugon", 7)==0)
 		{
 			IMMR_DEB = true;
 		}
 	        if(strncmp(buf, "debugoff", 8)==0)
 		{
+			IMMR_DEB = false;
 		}
 		if(strncmp(buf, "index0", 6)==0)
 		{
